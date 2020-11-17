@@ -1,0 +1,21 @@
+// SIZE
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+// DISPLAY-FLEX
+@mixin flex($justify-content: center, $align-items: center) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  @content;
+}
+
+// MEDIAS-QUERIES
+// DESKTOPS
+@mixin desktops() {
+  @media screen and (min-width: 600px){
+    @content;
+  }
+}
